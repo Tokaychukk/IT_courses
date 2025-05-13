@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Programerio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6610f2;
+        }
+        body { background-color: #f8f9fa; }
+        .navbar-brand { font-weight: bold; }
+        .navbar { box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img style="height: 30px; margin-right: 10px;">Programerio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Курси</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Профіль</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.html">Підтримка</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Про нас</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Контакти</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="logout()">Вийти</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Контакти</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <p class="text-center">Зв’яжіться з нами для отримання додаткової інформації або підтримки.</p>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item"><strong>Email:</strong> <a href="mailto:support@programerio.com">support@programerio.com</a></li>
+                        <li class="list-group-item"><strong>Телефон:</strong> +380 123 456 789</li>
+                        <li class="list-group-item"><strong>Адреса:</strong> вул. Технологічна, 1, Київ, Україна</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2025 Programerio. Усі права захищено.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function logout() {
+            localStorage.removeItem('userId');
+            localStorage.removeItem('token');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
